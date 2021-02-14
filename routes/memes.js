@@ -50,7 +50,6 @@ router.post('/', async (req,res) => {
     })
 
     const result = await memeData.save();
-    console.log("Data Saved in DB through API")
     res.setHeader('Content-Type', 'application/json');
     res.json({id:result.id})
 })

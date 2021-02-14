@@ -4,7 +4,7 @@ if(process.env.NODE_ENV != 'production') {
 
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8081;
 const dburl = process.env.DATABASE_URL || 'mongodb://localhost/CrioStage2B';
 const expressEjsLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
