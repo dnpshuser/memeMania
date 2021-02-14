@@ -3,7 +3,8 @@
 Simple web application to get and post memes
 
 ## Live Demo
-https://whispering-falls-55297.herokuapp.com/dashboard
+https://floating-castle-50927.herokuapp.com/  
+(Use DESKTOP VERSION if you are browsing this in mobile)
 
 ## Requirements
 
