@@ -3,7 +3,7 @@ const router = express.Router();
 const Meme = require('../models/meme');
 
 router.get('/',async (req,res) => {
-    const getMemes = await Meme.find();
+    let getMemes = await Meme.find();
     getMemes.reverse();
     let len = getMemes.length;
     let sub = 0;

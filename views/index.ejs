@@ -1,40 +1,37 @@
 <div class="heading" >
     <h1>Welcome to the Meme Mania</h1>
+    
 </div>
 
-<div class="parent" >
+<div class="form-container">
+        
+    <form action="/post" class="form" method="POST">
+        
+        <h3 id="form-heading">Create a new meme</h3>
+        
+        <input id="name" name="name" type="text" placeholder="Enter Your full name" required>
+        <br><br>
+        <input id="caption" name="caption" type="text" placeholder="Be creative with the caption" required>
+        <br><br>
+        <input id="url" name="url" type="text"  placeholder="Enter the image url" required>
+        
+        
+        
+        <button type="submit" id="submit-button" >Create</button>
+    </form>
+</div>
+
+<br><hr><br>
 
     <div class="container">
         
         <% for(let i = 0;i<memes.length;i++) { %>
             <div class="memes">
-                <img src=" <%=memes[i].imageUrl %>" alt="Meme Image">
-                <p class="caption"> <%= memes[i].caption %></p>
-                
+                <img src=" <%=memes[i].url %>" alt="Something went wrong with the url">
+                <p class="caption"> <b><%= memes[i].caption %></b> <i>by</i> <b><%= memes[i].name %></b> </p>
             </div>
         <% } %>
             
     </div>
-
-
-    <div class="form-container">
-
-        
-        <form action="/post" class="form" method="POST">
-            
-            <h3 id="form-heading">Create a new meme</h3>
-            
-            <input id="name" name="name" type="text" placeholder="Enter Your full name" required>
-            <br><br>
-            <input id="caption" name="caption" type="text" placeholder="Be creative with the caption" required>
-            <br><br>
-            <input id="imageUrl" name="imageUrl" type="text"  placeholder="Enter the image url" required>
-            
-            
-            
-            <button type="submit" id="submit-button" >Create</button>
-        </form>
-    </div>
-
             
 </div>

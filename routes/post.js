@@ -6,7 +6,7 @@ router.post('/',async (req,res) => {
     const newMeme = new Meme({
         name : req.body.name,
         caption : req.body.caption,
-        imageUrl : req.body.imageUrl
+        url : req.body.url
     });
 
     const result = await newMeme.save();
